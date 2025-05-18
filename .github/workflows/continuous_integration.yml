@@ -9,7 +9,7 @@ jobs:
         name: Trigger Jenkins Job
         uses: sbitio/trigger-jenkins-job@master
         with:
-          JENKINS_USER: ${{ secrets.USERNAME }}
-          JENKINS_TOKEN: ${{ secrets.TOKEN }}
-          JENKINS_HOST: ${{ secrets.HOST }}
+          JENKINS_USER: "admin"
+          JENKINS_TOKEN: "11b3fa6d90534b7928d80e90f8550b8d77"
+          JENKINS_HOST: "http://15.207.72.90:8080"
           JENKINS_JOB: "devop_assignment"
