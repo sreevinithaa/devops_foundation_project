@@ -2,7 +2,7 @@ on: push
 
 jobs:
   launch_jenkins_job:
-    name: trigger jenkins job
+    name: trigger jenkins jobs
     runs-on: ubuntu-latest
     steps:
       -
