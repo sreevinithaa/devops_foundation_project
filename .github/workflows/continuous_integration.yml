@@ -5,11 +5,20 @@ on: [push]
 
 env:
   owner_name: Vini 
+  host : ${{ secrets.HOST }}
+  port : ${{ secrets.PORT }}
+  username : ${{ secrets.USERNAME }}
+  token : ${{ secrets.TOKEN }}
 
 jobs:
   use_env_var:
     runs-on: ubuntu-latest
-    steps:
-      - run: echo "Testing continuous integration - success from $owner_name"
-
+     steps:
+    -name: trigger Job
+      uses: appleboy/jenkins-action@main
+      with:
+        url: "http://$host:$port"
+        user: "$username"
+        token: $token
+        job: "devop_assignment"
 
