@@ -1,15 +1,16 @@
-on: push
-
+name: trigger jenkins job
+on: [push]
 jobs:
-  launch_jenkins_job:
-    name: trigger jenkins jobs
+
+  build:
+    name: Build
     runs-on: ubuntu-latest
     steps:
-      -
-        name: Trigger Jenkins Job
-        uses: sbitio/trigger-jenkins-job@master
-        with:
-          JENKINS_USER: "admin"
-          JENKINS_TOKEN: "11b3fa6d90534b7928d80e90f8550b8d77"
-          JENKINS_HOST: "http://15.207.72.90:8080"
-          JENKINS_JOB: "devop_assignment"
+    - name: trigger single Job
+      uses: appleboy/jenkins-action@master
+      with:
+        url: "http://15.207.72.90:8080"
+        user: "admin"
+        token: "11b3fa6d90534b7928d80e90f8550b8d77"
+        job: "devop_assignment"
+
