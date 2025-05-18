@@ -14,7 +14,8 @@ jobs:
   use_env_var:
     runs-on: ubuntu-latest
      steps:
-      uses: appleboy/jenkins-action@main
+       - name: trigger single Job
+      uses: appleboy/jenkins-action@master
       with:
         url: "http://$host:$port"
         user: "$username"
