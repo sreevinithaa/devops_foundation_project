@@ -1,0 +1,15 @@
+name: continuous integration
+run-name: Testing continuous integrtion
+
+on: [push]
+
+env:
+  owner_name: Vini 
+
+jobs:
+  use_env_var:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "Testing continuous integration - success from $owner_name"
+
+
