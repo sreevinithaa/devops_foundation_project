@@ -7,7 +7,7 @@ jobs:
     steps:
       -
         name: Trigger Jenkins Job
-        uses: sbitio/trigger-jenkins-job@main
+        uses: sbitio/trigger-jenkins-job@master
         with:
           JENKINS_USER: ${{ secrets.USERNAME }}
           JENKINS_TOKEN: ${{ secrets.TOKEN }}
